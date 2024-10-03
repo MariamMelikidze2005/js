@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #table1{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 2px solid black;
+        }
+    </style>
+    <table id="table1">
+        <tr>
+            <td>1:1</td>
+            <td>1:2</td>
+        </tr>
+        <tr>
+            <td>2:1</td>
+            <td>2:2</td>
+        </tr>
+    </table>
+    <button onclick="changetable('500', '500', 'yellow', '5')">changetable </button>
+    <script>
+        function changetable(x, y, color, z){
+            let table = document.getElementById('table1')
+            table.style.width = x + 'px'
+            table.style.height = y + 'px'
+            table.style.backgroundColor = color
+            table.style.border = z + 'px' + 'solid black'
+        }
+    </script>
+</body>
+</html>

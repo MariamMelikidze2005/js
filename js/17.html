@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="tablecont"></div>
+    <button onclick="generateTable(4, 3, '100px', '50px', 'red', '2px')">create Table</button>
+
+    <script>
+    function generateTable(rows, columns, width, height, bgColor, borderSize) {
+        const tablecont = document.getElementById('tablecont')
+
+        let table = document.createElement('table')
+
+        table.style.width = '100%'
+        table.style.border = borderSize + ' solid black'
+  
+        for (let i = 1; i <= rows; i++) {
+            let tr = document.createElement('tr')
+            for (let j = 1; j <= columns; j++) {
+                let td = document.createElement('td')
+                td.textContent = `${i} : ${j}`
+
+                td.style.backgroundColor = bgColor
+                td.style.width = width
+                td.style.height = height
+                td.style.border = borderSize + ' solid black'
+
+                tr.appendChild(td)
+            }
+            table.appendChild(tr)
+        }
+        tablecont.appendChild(table)
+    }
+    </script>
+</body>
+</html>

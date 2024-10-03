@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #table1{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 5px solid rgb(114, 14, 14);
+        }
+    </style>
+    <table id="table1">
+        <tr>
+            <td>1:1</td>
+            <td>1:2</td>
+        </tr>
+        <tr>
+            <td>2:1</td>
+            <td>2:2</td>
+        </tr>
+    </table>
+    <button onclick="changewidth(300)">Change Width to 300px</button>
+    <button onclick="changewidth(500)">Change Width to 500px</button>
+    <script>
+        function changewidth(size){
+            let table = document.getElementById('table1');
+            table.style.width = size + 'px'; 
+        }
+    </script>
+</body>
+</html>

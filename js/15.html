@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 3px solid rgb(145, 13, 13);
+        }
+    </style>
+    <div id="tablecont"></div>
+    <button onclick="numbers(2, 3)">tables(2, 3)</button>
+    <script>
+    function numbers(m, n){
+
+            const tablecont = document.getElementById('tablecont')
+
+            let table = document.createElement('table')
+            table.id = "table1"
+            for(let i = 1; i <= n; i++){
+                let tr = document.createElement('tr')
+                for(let j = 1; j <= m; j++){
+                    let td = document.createElement('td')
+                    td.textContent = `${i} : ${j}`;
+                    tr.appendChild(td)
+                }
+                table.appendChild(tr)
+            }
+        tablecont.appendChild(table)
+        console.log('Table created successfully.')
+        }
+    </script>
+</body>
+</html>

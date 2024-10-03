@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #table1 {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 5px solid rgb(88, 8, 8);
+        }
+    </style>
+    <table id="table1">
+        <tr>
+            <td>1:1</td>
+            <td>1:2</td>
+        </tr>
+        <tr>
+            <td>2:1</td>
+            <td>2:2</td>
+        </tr>
+    </table>
+    <button onclick="changebackgroundColor('red')">Change Background Color</button>
+    <script>
+        function changebackgroundColor(color) {
+            let table = document.getElementById('table1');
+            table.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
